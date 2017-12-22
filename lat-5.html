@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Latihan JS</title>
+</head>
+<body>
+
+<!-- Event Advance -->
+<!-- penggunaan function pada event ketika element di click (onclick event) -->
+<input type="text" id="inputan">
+
+<p id="testing">isi asal</p>
+
+<script type="text/javascript">
+document.getElementById('inputan').onclick = function (){
+	document.getElementById('testing').innerHTML = 'form di klik';
+}
+document.getElementById('inputan').onchange = function (){
+	document.getElementById('testing').innerHTML = 'form di ubah';
+}
+document.getElementById('inputan').onfocus = function (){
+	document.getElementById('testing').innerHTML = 'form di focus';
+}
+
+function namaFungsi()
+{
+	console.log('form di ubah');
+}
+
+document.getElementById("inputan").addEventListener("change", namaFungsi);
+document.getElementById("inputan").addEventListener("focus", function() {
+	console.log('mirip jquery');	
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Latihan JS</title>
+</head>
+<body>
+
+<!-- penggunaan function pada event ketika element di click (onclick event) -->
+<button type="button" onclick="Halo()">Test</button>
+
+<!-- mengambil nilai value dari element dan dikirim ke function -->
+<button type="button" onclick="Halo2(this.value)" value="wisnu">Test 2</button>
+<button id="tombol" type="button" onclick="Halo3()" data="bandung">Test 3</button>
+
+<p id="testing">isi asal</p>
+
+<script type="text/javascript">
+function Halo()
+{
+	document.getElementById('testing').innerHTML = 'test';
+}
+
+function Halo2(nama)
+{
+	document.getElementById('testing').innerHTML = nama;
+}
+
+function Halo3()
+{
+	// ambil nilai attribute custom dari element
+	var nama = document.getElementById('tombol').getAttribute("data");
+	document.getElementById('testing').innerHTML = nama;
+}
+</script>
+</body>
+</html>

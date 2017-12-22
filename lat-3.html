@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Latihan JS</title>
+</head>
+<body>
+
+<button type="button"
+onclick="Halo()">Test</button>
+
+<p id="testing">isi asal</p>
+
+<script type="text/javascript">
+function Halo()
+{
+	// penulisan variable
+	var el = document.getElementById('testing');
+	var a = 10;
+	var b = 5;
+
+	// bisa juga seperti ini
+	var ele = document.getElementById('testing'),
+	aa = 10, 
+	bb = 5;
+
+	// atau satu baris
+	var elem = document.getElementById('testing'), aaa = 10, bbb = 5;
+
+	// string tidak bisa lebih dari satu baris seperti PHP
+	// penulisannya menjadi seperti ini
+	var text = 'dasdsad';
+	text += 'dasdsad';
+	text = text + 'dasdsad';
+
+	el.innerHTML = text;
+	el.innerHTML = a + b;
+
+	// tambah attribute baru ke element
+	el.setAttribute('class', 'satu');
+
+	// tambah css ke element
+	el.style.color = 'blue';
+	el.style.fontSize = '30px';
+
+}
+</script>
+
+</body>
+</html>
